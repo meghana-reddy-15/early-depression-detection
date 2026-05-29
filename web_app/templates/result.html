@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Depression Result</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="/donate">DepressionDetect</a>
+            </div>
+           \<ul class="nav navbar-nav">
+    <li class="active"><a href="/donate">Analyze</a></li>
+</ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="container">
+
+        <h2 class="text-center">Depression Prediction Result</h2>
+        <hr>
+
+        <!-- FINAL RESULT -->
+        {% if result %}
+        <div class="alert alert-success text-center">
+            <h2><b>Final Status:</b> {{ result }}</h2>
+        </div>
+        {% endif %}
+
+        <!-- TEXT RESULT -->
+        {% if text_result %}
+        <div class="alert alert-info text-center">
+            <h4><b>Text Analysis:</b> {{ text_result }}</h4>
+        </div>
+        {% endif %}
+
+        <!-- IMAGE RESULT -->
+        {% if image_result %}
+        <div class="alert alert-warning text-center">
+            <h4><b>Image Analysis:</b> {{ image_result }}</h4>
+        </div>
+        {% endif %}
+
+        <!-- AUDIO RESULT -->
+        {% if audio_result %}
+        <div class="alert alert-danger text-center">
+            <h4><b>Audio Analysis:</b> {{ audio_result }}</h4>
+        </div>
+        {% endif %}
+
+        <!-- SPECTROGRAM -->
+        {% if spectrogram %}
+        <div class="text-center">
+            <h4>Audio Spectrogram:</h4>
+            <img src="{{ spectrogram }}" class="img-responsive" style="margin:auto; max-width:500px;">
+        </div>
+        {% endif %}
+
+        <br><br>
+
+        <!-- BACK BUTTON -->
+        <div class="text-center">
+            <a href="/donate" class="btn btn-primary">Try Again</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

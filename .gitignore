@@ -1,0 +1,18 @@
+# Virtual environment
+venv/
+
+# Dataset
+archive/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Uploaded user files
+web_app/static/audio_uploads/
+web_app/static/image_uploads/
+web_app/static/spectrograms/
+web_app/static/matrices/
