@@ -140,7 +140,6 @@ See `requirements.txt` for full list. Key dependencies:
 
 This tool is **not a medical diagnosis**. It is an academic project built for educational purposes. If you or someone you know is struggling with depression, please consult a licensed mental health professional.
 
-**Helpline (India):** iCall — 9152987821
 
 ---
 
